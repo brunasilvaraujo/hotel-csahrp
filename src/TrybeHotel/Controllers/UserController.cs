@@ -17,16 +17,34 @@ namespace TrybeHotel.Controllers
         {
             _repository = repository;
         }
-        
+
         [HttpGet]
-        public IActionResult GetUsers(){
-            throw new NotImplementedException();
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Admin")]
+        public IActionResult GetUsers()
+        {
+            try
+            {
+                var users = _repository.GetUsers();
+                return Ok(users);
+            }
+            catch (Exception e)
+            {
+                return Unauthorized(new { message = e.Message });
+            }
         }
 
         [HttpPost]
         public IActionResult Add([FromBody] UserDtoInsert user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var newUser = _repository.Add(user);
+                return Created("", newUser);
+            }
+            catch (Exception e)
+            {
+                return Conflict(new { message = e.Message });
+            }
         }
     }
 }
