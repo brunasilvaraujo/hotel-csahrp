@@ -28,27 +28,6 @@
           }
         },
         {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Controllers/RoomController.cs",
-                "region": {
-                  "startLine": 32,
-                  "startColumn": 69,
-                  "endLine": 32,
-                  "endColumn": 82
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CS8604",
           "level": "warning",
           "message": "Possible null reference argument for parameter 's' in 'byte[] Encoding.GetBytes(string s)'.",
@@ -70,18 +49,18 @@
           }
         },
         {
-          "ruleId": "CS1998",
+          "ruleId": "CS8602",
           "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "message": "Dereference of a possibly null reference.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Controllers/GeoController.cs",
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Controllers/RoomController.cs",
                 "region": {
-                  "startLine": 35,
-                  "startColumn": 42,
-                  "endLine": 35,
-                  "endColumn": 61
+                  "startLine": 32,
+                  "startColumn": 69,
+                  "endLine": 32,
+                  "endColumn": 82
                 }
               }
             }
@@ -112,18 +91,18 @@
           }
         },
         {
-          "ruleId": "CS1998",
+          "ruleId": "CS8603",
           "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "message": "Possible null reference return.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
                 "region": {
-                  "startLine": 38,
-                  "startColumn": 43,
-                  "endLine": 38,
-                  "endColumn": 57
+                  "startLine": 50,
+                  "startColumn": 24,
+                  "endLine": 50,
+                  "endColumn": 47
                 }
               }
             }
@@ -133,60 +112,18 @@
           }
         },
         {
-          "ruleId": "CS1998",
+          "ruleId": "CS8603",
           "level": "warning",
-          "message": "This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.",
+          "message": "Possible null reference return.",
           "locations": [
             {
               "resultFile": {
                 "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
                 "region": {
-                  "startLine": 44,
-                  "startColumn": 54,
-                  "endLine": 44,
-                  "endColumn": 68
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/HotelRepository.cs",
-                "region": {
-                  "startLine": 24,
-                  "startColumn": 32,
-                  "endLine": 24,
-                  "endColumn": 38
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/HotelRepository.cs",
-                "region": {
-                  "startLine": 42,
-                  "startColumn": 28,
-                  "endLine": 42,
-                  "endColumn": 38
+                  "startLine": 54,
+                  "startColumn": 20,
+                  "endLine": 54,
+                  "endColumn": 44
                 }
               }
             }
@@ -265,12 +202,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/HotelRepository.cs",
                 "region": {
-                  "startLine": 34,
-                  "startColumn": 36,
-                  "endLine": 34,
-                  "endColumn": 46
+                  "startLine": 24,
+                  "startColumn": 32,
+                  "endLine": 24,
+                  "endColumn": 38
                 }
               }
             }
@@ -286,54 +223,12 @@
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/HotelRepository.cs",
                 "region": {
-                  "startLine": 47,
-                  "startColumn": 72,
-                  "endLine": 47,
-                  "endColumn": 80
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
-                "region": {
-                  "startLine": 56,
-                  "startColumn": 31,
-                  "endLine": 56,
-                  "endColumn": 39
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
-          "ruleId": "CS8602",
-          "level": "warning",
-          "message": "Dereference of a possibly null reference.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
-                "region": {
-                  "startLine": 59,
-                  "startColumn": 30,
-                  "endLine": 59,
-                  "endColumn": 34
+                  "startLine": 42,
+                  "startColumn": 28,
+                  "endLine": 42,
+                  "endColumn": 38
                 }
               }
             }
@@ -345,16 +240,121 @@
         {
           "ruleId": "CS8604",
           "level": "warning",
-          "message": "Possible null reference argument for parameter 'entity' in 'EntityEntry<Room> DbSet<Room>.Remove(Room entity)'.",
+          "message": "Possible null reference argument for parameter 'latitudeOrigin' in 'int GeoService.CalculateDistance(string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny)'.",
           "locations": [
             {
               "resultFile": {
-                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
                 "region": {
-                  "startLine": 70,
-                  "startColumn": 35,
-                  "endLine": 70,
-                  "endColumn": 39
+                  "startLine": 81,
+                  "startColumn": 25,
+                  "endLine": 81,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'longitudeOrigin' in 'int GeoService.CalculateDistance(string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 25,
+                  "endLine": 82,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'latitudeDestiny' in 'int GeoService.CalculateDistance(string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 25,
+                  "endLine": 83,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'longitudeDestiny' in 'int GeoService.CalculateDistance(string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 25,
+                  "endLine": 84,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
+                "region": {
+                  "startLine": 103,
+                  "startColumn": 31,
+                  "endLine": 103,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8619",
+          "level": "warning",
+          "message": "Nullability of reference types in value of type 'List<GeoDtoHotelResponse?>' doesn't match target type 'List<GeoDtoHotelResponse>'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Services/GeoService.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 20,
+                  "endLine": 104,
+                  "endColumn": 26
                 }
               }
             }
@@ -490,6 +490,111 @@
           }
         },
         {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 36,
+                  "endLine": 34,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 72,
+                  "endLine": 47,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 31,
+                  "endLine": 56,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 30,
+                  "endLine": 59,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'entity' in 'EntityEntry<Room> DbSet<Room>.Remove(Room entity)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///home/bruna/Trybe/csharp-032-csharp-projeto-trybe-hotel-fase-c/src/TrybeHotel/Repository/RoomRepository.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 35,
+                  "endLine": 70,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
           "ruleId": "CA1050",
           "level": "note",
           "message": "Declare types in namespaces",
@@ -578,20 +683,6 @@
             ]
           }
         },
-        "CS1998": {
-          "id": "CS1998",
-          "shortDescription": "Async method lacks 'await' operators and will run synchronously",
-          "defaultLevel": "warning",
-          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS1998)",
-          "properties": {
-            "category": "Compiler",
-            "isEnabledByDefault": true,
-            "tags": [
-              "Compiler",
-              "Telemetry"
-            ]
-          }
-        },
         "CS8032": {
           "id": "CS8032",
           "shortDescription": "An analyzer instance cannot be created",
@@ -639,6 +730,20 @@
           "shortDescription": "Possible null reference argument.",
           "defaultLevel": "warning",
           "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8619": {
+          "id": "CS8619",
+          "shortDescription": "Nullability of reference types in value doesn't match target type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8619)",
           "properties": {
             "category": "Compiler",
             "isEnabledByDefault": true,

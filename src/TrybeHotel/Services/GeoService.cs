@@ -37,13 +37,73 @@ namespace TrybeHotel.Services
         // 12. Desenvolva o endpoint GET /geo/address
         public async Task<GeoDtoResponse> GetGeoLocation(GeoDto geoDto)
         {
-            throw new NotImplementedException();
+            var url = $"https://nominatim.openstreetmap.org/search?street={geoDto.Address}&city={geoDto.City}&country=Brazil&state={geoDto.State}&format=json&limit=1";
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, url);
+
+            requestMessage.Headers.Add("Accept", "application/json");
+            requestMessage.Headers.Add("User-Agent", "aspnet-user-agent");
+
+            var response = await _client.SendAsync(requestMessage);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return default(GeoDtoResponse);
+            }
+
+            var result = await response.Content.ReadFromJsonAsync<GeoDtoResponse[]>();
+            return result?.FirstOrDefault();
         }
 
         // 12. Desenvolva o endpoint GET /geo/address
         public async Task<List<GeoDtoHotelResponse>> GetHotelsByGeo(GeoDto geoDto, IHotelRepository repository)
         {
-            throw new NotImplementedException();
+            var newDistance = await GetGeoLocation(geoDto);
+
+            if (newDistance == null)
+            {
+                return new List<GeoDtoHotelResponse>();
+            }
+
+            var Hotels = repository.GetHotels();
+
+            var hotelsWithDistances = await Task.WhenAll(Hotels.Select(async hotel =>
+            {
+                var hotelCoordinates = await GetGeoLocation(new GeoDto
+                {
+                    Address = hotel.address,
+                    City = hotel.cityName,
+                    State = hotel.state
+                });
+
+                if (hotelCoordinates != null)
+                {
+                    int distance = CalculateDistance(
+                        newDistance.lat,
+                        newDistance.lon,
+                        hotelCoordinates.lat,
+                        hotelCoordinates.lon
+                    );
+
+                    return new GeoDtoHotelResponse
+                    {
+                        HotelId = hotel.hotelId,
+                        Name = hotel.name,
+                        Address = hotel.address,
+                        CityName = hotel.cityName,
+                        State = hotel.state,
+                        Distance = distance
+                    };
+                }
+
+                return null;
+            }));
+
+            return hotelsWithDistances
+                .Where(h => h != null)
+                .OrderBy(h => h.Distance)
+                .ToList();
+
+
         }
 
 
@@ -66,6 +126,5 @@ namespace TrybeHotel.Services
         {
             return degree * Math.PI / 180;
         }
-
     }
 }
