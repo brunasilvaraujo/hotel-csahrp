@@ -23,8 +23,8 @@ namespace TrybeHotel.Controllers
         [HttpPost]
         public IActionResult PostCity([FromBody] City city)
         {
-            _repository.AddCity(city);
-            return CreatedAtAction("city", new { id = city.CityId }, city);
+            var citynew = _repository.AddCity(city);
+            return CreatedAtAction(nameof(GetCities), new { CityId = citynew.CityId }, citynew);
         }
 
         // 3. Desenvolva o endpoint PUT /city
@@ -32,7 +32,7 @@ namespace TrybeHotel.Controllers
         public IActionResult PutCity([FromBody] City city)
         {
             _repository.UpdateCity(city);
-            return Ok();
+            return Ok(city);
         }
     }
 }

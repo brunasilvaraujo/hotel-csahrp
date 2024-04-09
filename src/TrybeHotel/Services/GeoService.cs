@@ -1,4 +1,5 @@
 using System.Net.Http;
+using System.Text.Json;
 using Azure.Core;
 using TrybeHotel.Dto;
 using TrybeHotel.Repository;
@@ -29,7 +30,7 @@ namespace TrybeHotel.Services
                 return content;
             }
 
-            return default(object);
+            return null;
 
         }
 
@@ -44,7 +45,6 @@ namespace TrybeHotel.Services
         {
             throw new NotImplementedException();
         }
-
 
 
         public int CalculateDistance(string latitudeOrigin, string longitudeOrigin, string latitudeDestiny, string longitudeDestiny)

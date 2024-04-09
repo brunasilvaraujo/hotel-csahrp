@@ -17,43 +17,50 @@ namespace TrybeHotel.Repository
 
         public UserDto Login(LoginDto login)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Email == login.Email && u.Password == login.Password);
-            if (user == null)
+            try
             {
-                throw new Exception("Incorrect e-mail or password");
+                var user = _context.Users.FirstOrDefault(u => u.Email == login.Email && u.Password == login.Password);
+                if (user == null)
+                {
+                    throw new Exception("Invalid email or password");
+                }
+                return new UserDto
+                {
+                    UserId = user.UserId,
+                    Name = user.Name,
+                    Email = user.Email,
+                    UserType = user.UserType
+                };
             }
-            return new UserDto
+            catch (Exception e)
             {
-                userId = user.UserId,
-                name = user.Name,
-                email = user.Email,
-                userType = user.UserType
-            };
+                throw new Exception(e.Message);
+            }
         }
         public UserDto Add(UserDtoInsert user)
         {
             try
             {
-                var existingUser = _context.Users.FirstOrDefault(u => u.Email == user.email);
+                var existingUser = _context.Users.FirstOrDefault(u => u.Email == user.Email);
                 if (existingUser != null)
                 {
                     throw new Exception("User email already exists");
                 }
                 var newUser = new User
                 {
-                    Name = user.name,
-                    Email = user.email,
-                    Password = user.password,
+                    Name = user.Name,
+                    Email = user.Email,
+                    Password = user.Password,
                     UserType = "client"
                 };
                 _context.Users.Add(newUser);
                 _context.SaveChanges();
                 return new UserDto
                 {
-                    userId = newUser.UserId,
-                    name = newUser.Name,
-                    email = newUser.Email,
-                    userType = newUser.UserType
+                    UserId = newUser.UserId,
+                    Name = newUser.Name,
+                    Email = newUser.Email,
+                    UserType = newUser.UserType
                 };
             }
             catch (Exception e)
@@ -74,10 +81,10 @@ namespace TrybeHotel.Repository
             {
                 var users = _context.Users.Select(u => new UserDto
                 {
-                    userId = u.UserId,
-                    name = u.Name,
-                    email = u.Email,
-                    userType = u.UserType
+                    UserId = u.UserId,
+                    Name = u.Name,
+                    Email = u.Email,
+                    UserType = u.UserType
                 });
                 return users;
             }

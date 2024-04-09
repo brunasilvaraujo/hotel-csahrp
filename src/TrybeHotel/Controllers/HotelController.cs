@@ -22,7 +22,7 @@ namespace TrybeHotel.Controllers
         [HttpGet]
         public IActionResult GetHotels()
         {
-            throw new NotImplementedException();
+            return Ok(_repository.GetHotels());
         }
 
         [HttpPost]

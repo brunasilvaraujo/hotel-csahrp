@@ -23,11 +23,11 @@ namespace TrybeHotel.Services
         public string Generate(UserDto user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes(_tokenOptions.Secret!);
+            var key = Encoding.ASCII.GetBytes(_tokenOptions.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = AddClaims(user),
-                Expires = DateTime.UtcNow.AddDays(_tokenOptions.ExpiresDay),
+                Expires = DateTime.Now.AddDays(_tokenOptions.ExpiresDay),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);
@@ -37,8 +37,8 @@ namespace TrybeHotel.Services
         private ClaimsIdentity AddClaims(UserDto user)
         {
             var claims = new ClaimsIdentity();
-            claims.AddClaim(new Claim(ClaimTypes.Email, user.email!));
-            claims.AddClaim(new Claim(ClaimTypes.Role, user.userType!));
+            claims.AddClaim(new Claim(ClaimTypes.Email, user.Email!));
+            claims.AddClaim(new Claim(ClaimTypes.Role, user.UserType!));
             return claims;
         }
     }
