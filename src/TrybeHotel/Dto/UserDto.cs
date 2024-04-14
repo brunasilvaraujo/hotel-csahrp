@@ -6,6 +6,7 @@ namespace TrybeHotel.Dto
         public string? Name { get; set; }
         public string? Email { get; set; }
         public string? UserType { get; set; }
+        public string Password { get; internal set; }
     }
 
     public class UserDtoInsert
@@ -18,6 +19,6 @@ namespace TrybeHotel.Dto
     public class LoginDto
     {
         public string? Email { get; set; }
-        public string? Password { get; set; }
+        public string? Password { get; internal set; }
     }
 }
